@@ -1,7 +1,7 @@
 Backup Wordpress
 =================
 
-Simple bash script to used to backup wordpress website.
+Simple bash script used to backup a wordpress website.
 
 Modify the variables accordingly to the setup.
 
@@ -17,3 +17,12 @@ Modify the variables accordingly to the setup.
 
     WWW_TRANSFORM = website transform
     DB_TRANSFORM = database transform
+
+The script should be called from a cron job
+
+    cat /etc/cron.daily/backup
+
+    #!/bin/bash
+    /home/moustache/scripts/wpbackup.sh
+
+    
